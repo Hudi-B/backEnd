@@ -25,14 +25,20 @@ namespace productAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public ProductDTO GetById(Guid id)
+        public ActionResult<ProductDTO> GetById(Guid id)
         {
             var product = productDTOs.Where(x => x.Id == id).FirstOrDefault();
-            return product!;
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(product);
         }
 
         [HttpPost]
-        public ProductDTO PostProduct(CreateProductDTO createProduct)
+        public ActionResult<ProductDTO> PostProduct(CreateProductDTO createProduct)
         {
             var product = new ProductDTO(
                 Guid.NewGuid(),
@@ -43,8 +49,8 @@ namespace productAPI.Controllers
                 );
 
             productDTOs.Add(product);
-
-            return product;
+            
+            return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
         }
 
         [HttpPut]
@@ -67,18 +73,18 @@ namespace productAPI.Controllers
         }
 
         [HttpDelete]
-        public string DeleteProduct(Guid id)
+        public ActionResult<string> DeleteProduct(Guid id)
         {
             var index = productDTOs.FindIndex(x => x.Id == id);
 
             if (index != -1)
             {
                 productDTOs.RemoveAt(index);
-                return "Sikeres torles";
+                return Ok("Sikeres torles");
             }
             else
             {
-                return "Sikertelen torles";
+                return NotFound();
             }
         }
     }
