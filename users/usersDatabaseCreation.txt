@@ -1,0 +1,11 @@
+CREATE DATABASE db_user DEFAULT CHARACTER SET
+
+CREATE TABLE users(
+	Id varchar(50), //50 is the number of characters
+	Name varchar(30),
+	Email varchar(30),
+	Age int(3), //3 is the number of numbers
+	Created datetime
+)
+
+ALTER TABLE `users` ADD PRIMARY KEY(`Id`);
