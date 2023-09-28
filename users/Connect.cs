@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System.Reflection;
 
 namespace users
 {
@@ -6,6 +7,7 @@ namespace users
     {
         public MySqlConnection connection;
         private string Host;
+        private string Port;
         private string DbName;
         private string Username;
         private string Password;
@@ -13,12 +15,13 @@ namespace users
 
         public Connect()
         {
-            Host = "localhost";
+            Host = "192.168.50.54";
+            Port = "3017";
             DbName = "db_user";
             Username = "root";
-            Password = "";
+            Password = "password";
 
-            ConnectionString = $"Host={Host};Database={DbName};User={Username};Password={Password};SslMode=none"; //database details
+            ConnectionString = $"Host={Host};Port={Port};Database={DbName};User={Username};Password={Password};SSLMode=none"; //database details
             connection = new MySqlConnection(ConnectionString);
         }
     }
