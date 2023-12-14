@@ -25,7 +25,7 @@ namespace BlogApi.Repositories
 
         public Task<BlogUserContent> GetById(Guid Id)
         {
-            throw new NotImplementedException();
+            return await dbContext.BlogUserContent.SingleOrDefaultAsync(x => x.Id.Equals(Id));
         }
 
         public async Task<BlogUserContent> Post(CreateBlogUserContentDto createBlogUserContent)
@@ -35,7 +35,8 @@ namespace BlogApi.Repositories
                 Id = Guid.NewGuid(),
                 Title = createBlogUserContent.Title,
                 Content = createBlogUserContent.Content,
-                blogUserId = createBlogUserContent.UserId,
+                blogUserId = createBlogUserContent.blogUserId,
+                UserId = createBlogUserContent.blogUserId,
                 Created = DateTime.Now,
             };
             await dbContext.BlogUserContent.AddAsync(content);

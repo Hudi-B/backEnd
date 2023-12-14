@@ -16,7 +16,7 @@ namespace BlogApi.Models
         public string? Content { get; set; }
         [Required]
         public Guid blogUserId { get; set; }
-        public BlogUser? blogUser { get; set; }
+        public Guid UserId { get; set; }
         public DateTime Created  { get; set; }
 
 

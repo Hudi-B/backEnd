@@ -31,7 +31,11 @@ namespace BlogApi.Controllers
             return StatusCode(201, await blogUserContent.Get());
         }
 
-        
+        [HttpGet("id")]
+        public async Task<ActionResult<BlogUserContent>> GetById(Guid Id)
+        {
+            return StatusCode(201, await blogUserContent.GetById(Id));
+        }
 
     }
 }

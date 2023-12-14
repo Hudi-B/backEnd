@@ -16,7 +16,7 @@ namespace BlogApi.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                string conn = "server=192.168.50.169; database=Blog; user=root; password=password";
+                string conn = "server=192.168.50.166; database=Blog; user=root; password=password";
 
                 optionsBuilder.UseMySql(conn, ServerVersion.AutoDetect(conn));
             }
