@@ -2,7 +2,7 @@
 
 namespace BlogApi.Models
 {
-    public class BlogDbContext : DbContext
+    public class Bl ogDbContext : DbContext
     {
         public BlogDbContext(DbContextOptions options) : base(options) 
         {

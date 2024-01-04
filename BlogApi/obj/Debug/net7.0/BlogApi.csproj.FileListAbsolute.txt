@@ -84,3 +84,4 @@ C:\Users\sbencecsaba\Documents\Git\backEnd\BlogApi\obj\Debug\net7.0\refint\BlogA
 C:\Users\sbencecsaba\Documents\Git\backEnd\BlogApi\obj\Debug\net7.0\BlogApi.pdb
 C:\Users\sbencecsaba\Documents\Git\backEnd\BlogApi\obj\Debug\net7.0\BlogApi.genruntimeconfig.cache
 C:\Users\sbencecsaba\Documents\Git\backEnd\BlogApi\obj\Debug\net7.0\ref\BlogApi.dll
+C:\Users\sbencecsaba\Documents\Git\backEnd\BlogApi\obj\Debug\net7.0\BlogApi.sourcelink.json
