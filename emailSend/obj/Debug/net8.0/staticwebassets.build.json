@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "vAHH1ktpB4uwP9yL1flvah760c2WYxMBMWZSCBy7CAw=",
+  "Source": "emailSend",
+  "BasePath": "_content/emailSend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
