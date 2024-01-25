@@ -15,6 +15,7 @@ namespace LibraryAPIv2
             builder.Services.AddScoped<INationalityInterface, NationalityService> ();
             builder.Services.AddScoped<IBookInterface, BookService> ();
             builder.Services.AddScoped<IAuthorInterface, AuthorService>();
+            builder.Services.AddScoped<IEmailService, EmailService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
